@@ -1,0 +1,74 @@
+@import "@fortawesome/fontawesome-free/css/all.css";
+@import "./styles/font";
+* {
+    box-sizing: border-box;
+     border: 1px dashed red;
+}
+html,body {
+    font-size:10px;
+    padding:0;
+    margin:0;
+    width:100vw;
+    height: 100vh;
+}
+.name-surname{
+   font-family: "Verona-Lotte";
+  color: white;
+  font-size: 100px;
+}
+.title-wad, .div-image {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color: white;
+  font-size: 50px;
+  margin-left:20%;
+}
+.full-height {
+    height: 100vh;
+    background-color: #00B4D8;
+}
+h1 {
+    text-align: center;
+}
+div {
+  border: 1px dashed grey;
+}
+
+.section-about, .section-studies, .section-jobs, .section-webdev,
+.section-contact
+{
+    display:flex;
+    justify-content: center;
+    flex-direction: column; 
+    @media screen and (min-width: 768px){
+      flex-direction: row;
+    }
+  //  .section-title{
+
+  //  }
+   .section-content
+    {
+        flex-grow: 1;
+    }
+}
+
+.main-nav{
+ul{
+    border: 1px dashed grey;
+    display:flex;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 0px;
+    li{
+    list-style-type: none;
+    a:hover{
+      text-decoration: none;
+    }
+    a::before {
+    content: "/";
+    color:white;
+      }
+    }
+}
+}
