@@ -17,10 +17,10 @@ html,body {
   font-size: 100px;
 }
 .title-wad, .div-image {
+  text-align:center;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   color: white;
   font-size: 50px;
-  margin-left:20%;
 }
 .full-height {
     height: 100vh;
@@ -32,7 +32,9 @@ h1 {
 div {
   border: 1px dashed grey;
 }
-
+// .work-images{
+//   overflow:auto;
+// }
 .section-about, .section-studies, .section-jobs, .section-webdev,
 .section-contact
 {
@@ -52,6 +54,8 @@ div {
 }
 
 .main-nav{
+  width:100%;
+  margin-top:800px;
 ul{
     border: 1px dashed grey;
     display:flex;
