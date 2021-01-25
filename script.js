@@ -1,7 +1,7 @@
 import './style.scss';
 /* Code for the signature. */
 import ScrollMagic from 'scrollmagic';
-
+// import $ from 'jquery';
 // SVG ANIMATION
 function setTextAnimation(
   delay,
@@ -27,6 +27,7 @@ function setTextAnimation(
 setTextAnimation(0.1, 3.5, 2, 'linear', '#ffffff', true);
 // END OF SVG ANIMATION
 
+// Images animation
 const controller = new ScrollMagic.Controller();
 new ScrollMagic.Scene({
   triggerElement: '#trigger1',
@@ -36,3 +37,13 @@ new ScrollMagic.Scene({
 })
   .setClassToggle('#reveal1', 'visible') // add class to reveal
   .addTo(controller);
+
+// Skills section
+// $(() => {
+//   $('progress').each(function () {
+//     const max = $(this).val();
+//     $(this)
+//       .val(0)
+//       .animate({ value: max }, { duration: 2000, easing: 'easeOutCirc' });
+//   });
+// });
