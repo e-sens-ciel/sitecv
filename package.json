@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.html",
   "scripts": {
-    "start": "parcel index.html"
+    "start": "parcel index.html",
+    "start": "parcel build index.html --public-url http://www.if3projets.net/wad20/zouli/"
   },
   "keywords": [],
   "author": "",
