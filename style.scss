@@ -22,7 +22,7 @@ html,body {
 }
 // CSS for SVG animation 
 /* Google chrome */
-svg { position:absolute; top:0; left:0; height:100%; width:100% }
+.svg-position { position:absolute; top:0; left:0; height:100%; width:100% }
       @-webkit-keyframes svg-text-anim {
        40% {
           stroke-dashoffset: 0;

@@ -1,5 +1,4 @@
 import './style.scss';
-/* Code for the signature. */
 import ScrollMagic from 'scrollmagic';
 // import $ from 'jquery';
 // SVG ANIMATION
@@ -37,16 +36,6 @@ new ScrollMagic.Scene({
 })
   .setClassToggle('#reveal1', 'visible') // add class to reveal
   .addTo(controller);
-
-// Skills section
-// $(() => {
-//   $('progress').each(function () {
-//     const max = $(this).val();
-//     $(this)
-//       .val(0)
-//       .animate({ value: max }, { duration: 2000, easing: 'easeOutCirc' });
-//   });
-// });
 
 //= ====================================//
 //= ============= STUDIES  =============//
