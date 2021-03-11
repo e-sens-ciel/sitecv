@@ -1,4 +1,4 @@
-@import "@fortawesome/fontawesome-free/css/all.css";
+/* @import "@fortawesome/fontawesome-free/css/all.css";
 @import "./styles/font";
 
 /*# sourceMappingURL=style.css.map */
@@ -11,7 +11,7 @@
 * {
   font: inherit;
 }
-html,
+*/ html,
 body,
 div,
 span,

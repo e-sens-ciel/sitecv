@@ -6,7 +6,6 @@
   "scripts": {
     "start": "parcel index.html",
     "build": "parcel build index.html --public-url http://www.if3projets.net/wad20/zouli "
-
   },
   "keywords": [],
   "author": "",
@@ -14,7 +13,8 @@
   "dependencies": {
     "@fortawesome/fontawesome-free": "5.15.1",
     "jquery": "^3.5.1",
-    "scrollmagic": "^2.0.8"
+    "scrollmagic": "^2.0.8",
+    "scrollreveal": "^4.0.9"
   },
   "devDependencies": {
     "eslint": "7.14.0",

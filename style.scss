@@ -2,7 +2,15 @@
 @import "./styles/font";
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,900);
 
-//RESPONSIVE
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&display=swap");
+:root {
+	--card-width: 200px;
+	--card-height: 300px;
+
+	--card-transition-duration: 800ms;
+	--card-transition-easing: ease;
+}
+// Responsive breakpoints
 
 $sm:640px;
 $md:768px;
@@ -13,6 +21,7 @@ $xl: 1280px;
     box-sizing: border-box;
     //  border: 1px dashed red;
 }
+
 html,body {
     padding:0;
     margin:0;
@@ -20,7 +29,9 @@ html,body {
     height: 100vh;
     font-size:50px;
 }
+
 // CSS for SVG animation 
+
 /* Google chrome */
 .svg-position { position:absolute; top:0; left:0; height:100%; width:100% }
       @-webkit-keyframes svg-text-anim {
@@ -62,7 +73,10 @@ html,body {
   color: white;
   font-size: 200%;
 }
+.pink {
+  border: 5px dashed rgb(255, 7, 172);
 
+}
 .full-height {
   height: auto;
   @media only screen and (min-width:$md){
@@ -98,11 +112,12 @@ h1 {
   padding: 1rem;
   font-family: "Proxima";
   font-size:2.25vw;
-  @media only screen and (min-width:$md){
-  font-size:1.25vw;
-  text-align:auto;
-
-  }
+    @media only screen and (min-width:$md){
+    font-size:1.25vw;
+    text-align:auto;
+    text-align: justify;
+    text-justify: inter-word;
+    }
 
 }
 .section-welcome{
@@ -117,7 +132,7 @@ h1 {
 
 }
 .section-about, .section-studies, .section-jobs, .section-skills,
-.section-contact
+.section-contact, .section-projects
 {
   padding:0;
   font-size:50px;
@@ -130,18 +145,18 @@ h1 {
   {
     width:100%;
     padding:0;
-    @media only screen and (min-width:$md){
-      width:50%;
-     }
+      @media only screen and (min-width:$md){
+        width:50%;
+      }
   }
   .section-title
   {
     width:100%;
     padding:0;
     position:relative;
-    @media only screen and (min-width:$md){
-      width:50%;
-     }
+      @media only screen and (min-width:$md){
+        width:50%;
+      }
   }
   .h2-title{
     padding:25%;
@@ -344,7 +359,8 @@ input[type="submit"]{
 
 //  -----------------------------------------------------------------------------
             // <!-- //= =============DEBUT  TIMELINE=============// -->
-.right-section-studies {
+// .right-section-studies {
+//   border: 5px dashed rgb(230, 255, 7);
 
     // width:10vw;
     // height: 10vh;
@@ -390,18 +406,23 @@ input[type="submit"]{
   bottom: -15px;
 }
 
+// le plus petit possible
 .timeline {
-  border:2px;
+  // border:2px;
   position: relative;
-  left:auto;
-  right:auto;
+  // // left:auto;
+  // // right:auto;
   padding: 0;
   width: 100%;
-  margin-top: 20px;
   list-style-type: none;
+  border: 5px dashed rgb(255, 7, 172); 
+
 }
 
 .timeline:before {
+  // border: 5px dashed rgb(0, 23, 128);
+  border: 5px dashed rgb(222, 255, 7);
+
   position: absolute;
   left: 50%;
   top: 0;
@@ -550,13 +571,32 @@ input[type="submit"]{
   margin: 1em 1em 0 1em;
   padding: 1em;
   z-index: 15;
+  border: 5px dashed rgb(21, 247, 0);
+  // font-size: 1vw;
+
+
 }
 
 @media(min-width: 768px){
+  // .desc {
+  // font-family: "Proxima";
+  // font-size: 1.2vw;
+  // .title-studies{
+  //   font-size:0.5rem;
+  //    border: 5px dashed red;
+  // }
+// }
+
+//MOYEN
   .timeline {
     width: 660px;
     margin: 0 auto;
-    margin-top: 20px;
+    // margin-top: 20px;
+    //  border: 5px dashed red;
+    width: 100%;
+    border: 5px dashed rgb(253, 255, 255);
+
+
   }
 
   .timeline li:after {
@@ -565,31 +605,46 @@ input[type="submit"]{
     height: 0;
     clear: both;
     visibility: hidden;
+    border: 5px dashed rgb(111, 7, 196);
+
+    
   }
-  
+  p {
+    border: 5px dashed rgb(111, 7, 196);
+    text-align:left;
+  }
   .timeline .hexa {
-    left: -28px;
+    left: -40px;
     right: auto;
     top: 8px;
+    border: 5px dashed rgb(124, 196, 7);
+
   }
 
   .timeline .direction-l .hexa {
     left: auto;
     right: -28px;
+    border: 5px dashed rgb(111, 7, 196);
+
+
   }
 
   .direction-l {
     position: relative;
-    width: 310px;
+    width: 50%;
     float: left;
-    text-align: left;
+    text-align: right;
+    border: 5px dashed rgb(111, 7, 196);
+    
   }
 
   .direction-r {
     position: relative;
-    width: 310px;
+    width: 50%;
     float: right;
     text-align: left;
+    border: 5px dashed rgb(111, 7, 196);
+
   }
 
   .flag-wrapper {
@@ -598,6 +653,8 @@ input[type="submit"]{
   
   .flag {
     font-size: 1.3vw;
+     border: 5px dashed red;
+
   }
 
   .direction-l .flag:after {
@@ -639,28 +696,270 @@ input[type="submit"]{
 
   .direction-r .desc {
     margin: 1em 0 0 0.75em;
+    border: 5px dashed rgb(248, 6, 167);
+    // font-size: 1vw;
+      .title-studies{
+    font-size:0.5rem;
+    border: 5px dashed red;
+  }
+
+
   }
 }
 
 @media(min-width: 992px){
+    .title-studies{
+    font-size:0.5rem;
+     border: 5px dashed red;
+    }
   .timeline {
-    width: 800px;
+    width: 100%;
     margin: 0 auto;
-    margin-top: 20px;
+    // margin-top: 20px;
+    // border: 5px dashed green;
+  border: 5px dashed rgb(222, 255, 7);
+
   }
 
   .direction-l {
     position: relative;
-    width: 380px;
+    width: 48%;
     float: left;
-    text-align: left;
+    text-align: right;
+    border: 5px dashed green;
+
   }
 
   .direction-r {
     position: relative;
-    width: 380px;
+    width: 46.5%;
     float: right;
     text-align:  left;
+    border: 5px dashed green;
+
   }
 }
+
+
+            // <!-- //= =============DEBUT  TIMELINE=============// -->
+            // <!-- //= =============DEBUT  TIMELINE=============// -->
+            // <!-- //= =============DEBUT  TIMELINE=============// -->
+            // <!-- //= =============DEBUT  TIMELINE=============// -->
+            // <!-- //= =============DEBUT  TIMELINE=============// -->
+            // <!-- //= =============DEBUT  TIMELINE=============// -->
+            // <!-- //= =============DEBUT  TIMELINE=============// -->
+            // <!-- //= =============DEBUT  TIMELINE=============// -->
+            // <!-- //= =============DEBUT  TIMELINE=============// -->
+            // <!-- //= =============DEBUT  TIMELINE=============// -->
+
+
+// font stuff
+// font stuff
+
+
+
+// colour stuff
+$white: #ffffff;
+$lightBG: #dce1df;
+$salmon: #ff6666;
+
+$teal: #0096a0;
+$tealMid: #0ebac7;
+$tealContrast: #33ffff;
+$tealShade:	#007c85;
+
+$darkGrey: #4f585e;
+
+// body {
+//   background: $lightBG;
+//   color: $darkGrey;
+//   font-family: 'Source Sans Pro', sans-serif;
+//   text-rendering: optimizeLegibility;
+// }
+
+a.btn {
+  background: $teal;
+  border-radius: 4px;
+	box-shadow: 0 2px 0px 0 rgba(0,0,0,0.25);
+  color: $white;
+  display: inline-block;
+  padding: 5%;
+  padding:2%;
+  position: relative;
+  text-decoration: none;
+	transition: all 0.1s 0s ease-out;
+  font-size:0.5rem;
 }
+
+.no-touch a.btn:hover {
+  background: lighten($teal,2.5);
+  box-shadow: 0px 8px 2px 0 rgba(0, 0, 0, 0.075);
+  transform: translateY(-2px);
+  transition: all 0.25s 0s ease-out;
+}
+
+.no-touch a.btn:active,
+a.btn:active {
+  background: darken($teal,2.5);
+  box-shadow: 0 1px 0px 0 rgba(255,255,255,0.25);
+  transform: translate3d(0,1px,0);
+  transition: all 0.025s 0s ease-out;
+}
+
+div.cards {
+  margin: 1%;
+  max-width: 960px;
+  text-align: center;
+  display:flex;
+
+}
+
+div.card {
+  background: $white;
+  display: inline-block;
+  margin: 8px;
+  max-width: 300px;
+  perspective: 1000;
+  position: relative;
+  text-align: left;
+  transition: all 0.3s 0s ease-in;
+  width: 300px;
+  z-index: 1;
+
+  img {
+    max-width: 300px;
+  }
+  
+  .card__image-holder {
+    background: rgba(0,0,0,0.1);
+    height: 0;
+    padding-bottom: 75%;
+  }
+
+  div.card-title {
+    background: $white;
+    padding: 6px 15px 10px;
+    position: relative;
+    z-index: 0;
+    
+    a.toggle-info {
+      border-radius: 32px;
+      height: 32px;
+      padding: 0;
+      position: absolute;
+      right: 15px;
+      top: 10px;
+      width: 32px;
+      
+      span {
+        background: $white;
+        display: block;
+        height: 2px;
+        position: absolute;
+        top: 16px;
+        transition: all 0.15s 0s ease-out;
+        width: 12px;
+      }
+      
+      span.left {
+        right: 14px;
+        transform: rotate(45deg);
+      }
+      span.right {
+        left: 14px;
+        transform: rotate(-45deg);
+      }
+    }
+    
+    h2 {
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: -0.05em;
+      margin: 0;
+      padding: 0;
+      
+      small {
+        display: block;
+        font-size: 18px;
+        font-weight: 600;
+        letter-spacing: -0.025em;
+      }
+    }
+  }
+
+  div.card-description {
+    padding: 0 15px 10px;
+    position: relative;
+    font-size: 14px;
+  }
+
+  div.card-actions {
+  	box-shadow: 0 2px 0px 0 rgba(0,0,0,0.075);
+    padding: 10px 15px 20px;
+    text-align: center;
+  }
+  
+  div.card-flap {
+    background: darken($white,15);
+    position: absolute;
+    width: 100%;
+    transform-origin: top;
+    transform: rotateX(-90deg);
+  }
+  div.flap1 {
+    transition: all 0.3s 0.3s ease-out;
+    z-index: -1;
+  }
+  div.flap2 {
+    transition: all 0.3s 0s ease-out;
+    z-index: -2;
+  }
+  
+}
+
+div.cards.showing {
+  div.card {
+    cursor: pointer;
+    opacity: 0.6;
+    transform: scale(0.88);
+  }
+}
+
+.no-touch  div.cards.showing {
+  div.card:hover {
+    opacity: 0.94;
+    transform: scale(0.92);
+  }
+}
+
+div.card.show {
+  opacity: 1 !important;
+  transform: scale(1) !important;
+
+  div.card-title {
+    a.toggle-info {
+      background: $salmon !important;
+      span {
+        top: 15px;
+      }
+      span.left {
+        right: 10px;
+      }
+      span.right {
+        left: 10px;
+      }
+    }
+  }
+  div.card-flap {
+    background: $white;
+    transform: rotateX(0deg);
+  }
+  div.flap1 {
+    transition: all 0.3s 0s ease-out;
+  }
+  div.flap2 {
+    transition: all 0.3s 0.2s ease-out;
+  }
+}
+
+
