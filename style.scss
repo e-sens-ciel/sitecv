@@ -1,6 +1,7 @@
 @import "@fortawesome/fontawesome-free/css/all.css";
 @import "./styles/font";
-@import url(https://fonts.googleapis.com/css?family=Raleway:400,900);
+// @import url(https://fonts.googleapis.com/css?family=Raleway:400,900);
+// 
 
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&display=swap");
 :root {
@@ -65,6 +66,9 @@ html,body {
     }
 // end of SVG animation
 
+.bg-white{
+  background-color: white;
+}
 //Title WAD
 .title-wad{
   display:block;
@@ -112,13 +116,36 @@ h1 {
   padding: 1rem;
   font-family: "Proxima";
   font-size:2.25vw;
+  height: 50%;
+  // top: 50%;
+  // left: 50%;
+  padding: 10%;
+  margin:10%;
     @media only screen and (min-width:$md){
     font-size:1.25vw;
     text-align:auto;
     text-align: justify;
     text-justify: inter-word;
     }
+}
 
+// TEXT DYNAMIQUE
+.d-inline {
+  display: inline;
+}
+.d-none {
+  display: none;
+}
+.font-weight-lighter {
+  font-weight: lighter;
+  font-size:100%;
+  border: 5px dashed rgb(255, 7, 172);
+  margin-left: 10%;
+    @media only screen and (min-width:$md){
+    font-size:100%;
+    margin-left:20%;
+    text-align:center;
+    }
 }
 .section-welcome{
     background-color: #00B4D8;
@@ -176,38 +203,124 @@ h1 {
 }
 
 // Skills section starts here
-#skills span {
-    top: 1.3em;
-    left:0;
-    left: 1%;
-    position: relative;
-    font-size: 3vw;//1.4em;
-    font-weight: bolder;
-    font-family: monospace;
-    color: #fff;
+
+figure.snip0056 {
+  font-family: 'Raleway', Arial, sans-serif;
+  position: relative;
+  overflow: hidden;
+  margin: 10px;
+  min-width: 380px;
+  max-width: 480px;
+  width: 100%;
+  background: #ffffff;
+  color: #000000;
+}
+figure.snip0056 * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+figure.snip0056 > img {
+  width: 50%;
+  border-radius: 50%;
+  border: 4px solid #ffffff;
+  -webkit-transition: all 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out;
+  -webkit-transform: scale(1.6);
+  transform: scale(1.6);
+  position: relative;
+  float: right;
+  right: -15%;
+  z-index: 1;
+}
+figure.snip0056 figcaption {
+  padding: 20px 30px 20px 20px;
+  position: absolute;
+  left: 0;
+  width: 50%;
+}
+figure.snip0056 figcaption h2,
+figure.snip0056 figcaption p {
+  margin: 0;
+  text-align: left;
+  padding: 10px 0;
+  width: 100%;
+}
+figure.snip0056 figcaption h2 {
+  font-size: 1.3em;
+  font-weight: 300;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+figure.snip0056 figcaption h2 span {
+  font-weight: 800;
+}
+figure.snip0056 figcaption p {
+  font-size: 0.9em;
+  opacity: 0.8;
+}
+// figure.snip0056 figcaption .icons {
+//   width: 100%;
+//   text-align: left;
+// }
+// figure.snip0056 figcaption .icons i {
+//   font-size: 26px;
+//   padding: 5px;
+//   top: 50%;
+//   color: #000000;
+// }
+figure.snip0056 figcaption a {
+  opacity: 0.3;
+  -webkit-transition: opacity 0.35s;
+  transition: opacity 0.35s;
+}
+figure.snip0056 figcaption a:hover {
+  opacity: 0.8;
+}
+figure.snip0056 .position {
+  width: 100%;
+  text-align: left;
+  padding: 15px 30px;
+  font-size: 0.9em;
+  opacity: 1;
+  font-style: italic;
+  color: #ffffff;
+  background: #03045E;
+  clear: both;
+}
+figure.snip0056.blue .position {
+  background: #20638f;
+}
+// figure.snip0056.red .position {
+//   background: #962d22;
+// }
+figure.snip0056.darkblue .position {
+  background: #03045E;
+}
+figure.snip0056:hover > img,
+figure.snip0056.hover > img {
+  right: -12%;
 }
 
-progress {
-    background-color: #f3f3f3;
-    //border: 0;
-    height: 2em;
-    width: 100%;
+
+/* Demo purposes only */
+// html {
+//   height: 100%;
+// }
+.skills-cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: wrap;
+  margin: 0;
+  // height: 100%;
+  font-size:25%;
 }
 
-progress::-webkit-progress-bar {
-    background-color: #e0eaf0;
-}
-
-progress::-webkit-progress-value {
-    background-color: #329ad1;
-
-}
-
-progress::-moz-progress-bar {
-    background-color: #329ad1;
-
-}
 //Skills section ends here
+
+
+
+
 .main-nav{
     // display: flex;
     // justify-content: center;

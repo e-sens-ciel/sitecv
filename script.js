@@ -2,6 +2,7 @@ import './style.scss';
 // import ScrollMagic from 'scrollmagic';
 import $ from 'jquery';
 // import ScrollReveal from 'scrollreveal';
+import Typed from 'typed.js';
 
 window.location = '#start';
 
@@ -28,6 +29,19 @@ function setTextAnimation(
   }
 }
 setTextAnimation(0.1, 3.5, 2, 'linear', '#ffffff', true);
+
+// Typed Initiate
+if ($('.typed-text-output').length === 1) {
+  // eslint-disable-next-line camelcase
+  const typed_strings = $('.typed-text').text();
+  const typed = new Typed('.typed-text-output', {
+    strings: typed_strings.split(', '),
+    typeSpeed: 150,
+    backSpeed: 20,
+    smartBackspace: false,
+    loop: true,
+  });
+}
 
 // END OF SVG ANIMATION
 
@@ -63,13 +77,6 @@ $(document).ready(() => {
       $('div.card.show').removeClass('show');
 
       if (isShowing) {
-        $('button').click(() => {
-          console.log('asupprimer');
-          $('gitkeylog').attr(
-            'href',
-            'https://github.com/e-sens-ciel/keylogger',
-          );
-        });
         // this card was showing - reset the grid
         $('div.cards').removeClass('showing');
       } else {
